@@ -48,12 +48,14 @@ const music = [
 
 export default function Sidebar() {
     return (
-        <aside className="fixed left-5 top-3 mt-3 z-40 hidden h-[750px] w-64 overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#111111] lg:block">
-            <div className="flex flex-col p-3">
+       <aside className="fixed left-4 top-3 z-40 h-[750px] w-[264px] mt-3 overflow-hidden rounded-[22px] border border-white/[0.1] bg-[#111111]">
+            <div className="flex h-full flex-col p-3">
                 <div className="mb-4 px-3 pt-2">
-                    <h1 className="text-xl font-bold tracking-tight text-white underline">
-                        iridium
-                    </h1>
+                    <img
+                        src="/iridium.png"
+                        alt="iridium"
+                        className="h-12 w-auto object-contain object-left"
+                    />
                 </div>
 
                 <nav className="space-y-0.5">
