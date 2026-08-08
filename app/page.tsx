@@ -1,6 +1,6 @@
 import Home from "./pages/home"
 import MusicPlayer from "./components/player"
-import Sidebar from "./components/sidebar"
+import Sidebar from "./components/music"
 
 export default function Page() {
     return (

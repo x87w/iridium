@@ -16,7 +16,7 @@ import {
 } from "lucide-react"
 
 const song = {
-    title: "Select a song",
+    title: "",
     artist: "",
     artwork: "",
     duration: 0
