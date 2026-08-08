@@ -48,9 +48,7 @@ const music = [
 
 export default function Sidebar() {
     return (
-        <aside className="fixed left-3 top-3 z-40 hidden h-[771px] w-64 overflow-hidden rounded-[22px] border border-white/[0.14] bg-white/[0.055] shadow-[0_8px_40px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-2xl backdrop-saturate-150 lg:block">
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-
+        <aside className="fixed left-5 top-3 mt-3 z-40 hidden h-[750px] w-64 overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#111111] lg:block">
             <div className="flex flex-col p-3">
                 <div className="mb-4 px-3 pt-2">
                     <h1 className="text-xl font-bold tracking-tight text-white underline">

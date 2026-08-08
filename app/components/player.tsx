@@ -12,7 +12,7 @@ import {
     Download,
     Cast,
     List,
-    Volume2,
+    Volume2
 } from "lucide-react"
 
 const song = {
@@ -39,13 +39,10 @@ export default function MusicPlayer() {
     const currentTime = (progress / 100) * song.duration
 
     return (
-        <div className="fixed bottom-3 left-3 right-3 z-50 overflow-hidden rounded-[22px] border border-white/[0.14] bg-white/[0.055] px-4 py-3 shadow-[0_8px_40px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.12)] backdrop-blur-2xl backdrop-saturate-150 md:bottom-4 md:left-4 md:right-4">
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-            <div className="pointer-events-none absolute -top-20 left-1/4 h-32 w-1/2 rounded-full bg-white/[0.035] blur-3xl" />
-
+        <div className="fixed bottom-3 left-3 right-3 z-50 overflow-hidden rounded-[22px] border border-white/[0.08] bg-[#111111] px-4 py-3 md:bottom-4 md:left-4 md:right-4">
             <div className="relative flex h-20 items-center gap-4">
                 <div className="flex min-w-0 items-center gap-4 md:w-[280px]">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-inner">
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
                         {song.artwork && (
                             <img
                                 src={song.artwork}
@@ -91,20 +88,20 @@ export default function MusicPlayer() {
                     <div className="flex items-center justify-center gap-7">
                         <button
                             onClick={() => setShuffle(!shuffle)}
-                            className={`transition-all hover:scale-105 hover:text-white ${
+                            className={`transition hover:text-white ${
                                 shuffle ? "text-white" : "text-white/50"
                             }`}
                         >
                             <Shuffle size={22} />
                         </button>
 
-                        <button className="text-white/55 transition hover:scale-105 hover:text-white">
+                        <button className="text-white/55 transition hover:text-white">
                             <SkipBack size={25} />
                         </button>
 
                         <button
                             onClick={() => setPlaying(!playing)}
-                            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white text-black shadow-[0_2px_15px_rgba(255,255,255,0.12)] transition hover:scale-105"
+                            className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-black transition hover:scale-105"
                         >
                             {playing ? (
                                 <Pause size={21} fill="currentColor" />
@@ -117,13 +114,13 @@ export default function MusicPlayer() {
                             )}
                         </button>
 
-                        <button className="text-white/55 transition hover:scale-105 hover:text-white">
+                        <button className="text-white/55 transition hover:text-white">
                             <SkipForward size={25} />
                         </button>
 
                         <button
                             onClick={() => setRepeat(!repeat)}
-                            className={`transition-all hover:scale-105 hover:text-white ${
+                            className={`transition hover:text-white ${
                                 repeat ? "text-white" : "text-white/50"
                             }`}
                         >
@@ -197,7 +194,7 @@ export default function MusicPlayer() {
 
                 <button
                     onClick={() => setPlaying(!playing)}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white text-black shadow-lg"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black"
                 >
                     {playing ? (
                         <Pause size={19} fill="currentColor" />
