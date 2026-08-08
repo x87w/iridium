@@ -13,7 +13,6 @@ import {
     Cast,
     List,
     Volume2,
-    Clock3
 } from "lucide-react"
 
 const song = {
@@ -162,10 +161,6 @@ export default function MusicPlayer() {
                             className="h-1 w-32 cursor-pointer appearance-none rounded-full bg-white/[0.08] accent-white"
                         />
                     </div>
-
-                    <button className="hidden transition hover:text-white xl:block">
-                        <Clock3 size={23} />
-                    </button>
                 </div>
             </div>
 
