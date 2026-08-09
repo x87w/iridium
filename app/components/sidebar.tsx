@@ -2,7 +2,6 @@
 
 import {
     Home,
-    Search,
     Library,
     Heart,
     ListMusic,
@@ -16,10 +15,6 @@ const navigation = [
     {
         label: "Home",
         icon: Home
-    },
-    {
-        label: "Search",
-        icon: Search
     },
     {
         label: "Your Library",
