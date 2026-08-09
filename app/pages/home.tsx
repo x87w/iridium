@@ -6,21 +6,10 @@ import {
     ArrowRight,
     Search,
     Loader2,
-    Music2
+    Music2,
+    Play
 } from "lucide-react"
-
-type Track = {
-    id: number
-    title: string
-    artist: string
-    album: string
-    artwork: string
-    genre: string
-    duration: number
-    preview: string
-    explicit: boolean
-    type: string
-}
+import { usePlayer, type Track } from "../components/context"
 
 const formatTime = (seconds: number) => {
     if (!seconds) return "0:00"
@@ -32,6 +21,7 @@ const formatTime = (seconds: number) => {
 }
 
 export default function Home() {
+    const { playTrack } = usePlayer()
     const [query, setQuery] = useState("")
     const [results, setResults] = useState<Track[]>([])
     const [loading, setLoading] = useState(false)
@@ -129,7 +119,7 @@ export default function Home() {
                                     </h1>
 
                                     <p className="mt-5 text-base leading-7 text-white/45 md:text-lg">
-                                        You haven&apos;t listened to anything yet.
+                                        Search for music and start listening.
                                     </p>
                                 </div>
                             </div>
@@ -164,7 +154,8 @@ export default function Home() {
                             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                                 {results.map((track) => (
                                     <button
-                                        key={track.id}
+                                        key={String(track.id)}
+                                        onClick={() => playTrack(track)}
                                         className="group flex flex-col rounded-2xl border border-white/[0.06] bg-white/[0.03] p-3 text-left transition hover:bg-white/[0.06]"
                                     >
                                         <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
@@ -179,6 +170,16 @@ export default function Home() {
                                                     <Music2 size={36} />
                                                 </div>
                                             )}
+
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition group-hover:bg-black/40 group-hover:opacity-100">
+                                                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black">
+                                                    <Play
+                                                        size={20}
+                                                        fill="currentColor"
+                                                        className="ml-0.5"
+                                                    />
+                                                </div>
+                                            </div>
 
                                             {track.explicit && (
                                                 <span className="absolute right-2 top-2 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-white/80">
@@ -196,13 +197,15 @@ export default function Home() {
                                                 {track.artist}
                                             </p>
 
-                                            <p className="truncate text-[12px] text-white/30">
-                                                {track.album}
-                                            </p>
+                                            {track.album && (
+                                                <p className="truncate text-[12px] text-white/30">
+                                                    {track.album}
+                                                </p>
+                                            )}
 
                                             <div className="mt-1 flex items-center justify-between">
                                                 <span className="text-[11px] uppercase tracking-wide text-white/25">
-                                                    {track.genre}
+                                                    YouTube
                                                 </span>
 
                                                 <span className="text-[11px] text-white/30">
