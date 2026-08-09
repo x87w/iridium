@@ -1,5 +1,19 @@
 import { NextRequest, NextResponse } from "next/server"
 
+type ItunesResult = {
+    trackId?: number
+    collectionId?: number
+    trackName?: string
+    collectionName?: string
+    artistName?: string
+    artworkUrl100?: string
+    primaryGenreName?: string
+    trackTimeMillis?: number
+    previewUrl?: string
+    trackExplicitness?: string
+    wrapperType?: string
+}
+
 export async function GET(request: NextRequest) {
     const query = request.nextUrl.searchParams.get("q")
     const type = request.nextUrl.searchParams.get("type") || "tracks"
@@ -33,7 +47,7 @@ export async function GET(request: NextRequest) {
 
         const data = await response.json()
 
-        const results = data.results.map((item: any) => ({
+        const results = data.results.map((item: ItunesResult) => ({
             id: item.trackId || item.collectionId,
             title: item.trackName || item.collectionName,
             artist: item.artistName,
