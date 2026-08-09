@@ -45,7 +45,6 @@ export default function Home() {
 
                             <p className="mt-5 text-base leading-7 text-white/45 md:text-lg">
                                 You haven&apos;t listened to anything yet.
-                                Search for your favorite songs to get started!
                             </p>
                         </div>
                     </div>
