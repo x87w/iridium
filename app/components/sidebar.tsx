@@ -13,7 +13,7 @@ import {
     ChevronLeft,
     ChevronRight
 } from "lucide-react"
-import { useUi } from "./ui-context"
+import { useUi } from "./ui"
 
 type LucideIcon = typeof Home
 

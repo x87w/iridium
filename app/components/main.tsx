@@ -1,6 +1,6 @@
 "use client"
 
-import { useUi } from "./ui-context"
+import { useUi } from "./ui"
 
 export default function MainContent({
     children

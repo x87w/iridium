@@ -2,8 +2,8 @@ import Home from "./pages/home"
 import MusicPlayer from "./components/player"
 import Sidebar from "./components/sidebar"
 import { PlayerProvider } from "./components/context"
-import { UiProvider } from "./components/ui-context"
-import MainContent from "./components/main-content"
+import { UiProvider } from "./components/ui"
+import MainContent from "./components/main"
 
 export default function Page() {
     return (
