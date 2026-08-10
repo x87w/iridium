@@ -114,11 +114,7 @@ export default function Home() {
                         {!query.trim() && (
                             <div className="flex h-full items-start justify-center pt-32 text-center">
                                 <div className="max-w-2xl">
-                                    <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                                        Welcome to Iridium
-                                    </h1>
-
-                                    <p className="mt-5 text-base leading-7 text-white/45 md:text-lg">
+                                    <p className="mt-5 text-base leading-7 text-white md:text-lg">
                                         Search for music and start listening.
                                     </p>
                                 </div>
