@@ -32,7 +32,7 @@ Make sure you have Node.js installed.
 Clone the repository and install the dependencies:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/x87w/iridium.git
 cd iridium
 npm install
 ```
