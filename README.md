@@ -1,12 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Iridium
+
+A free, simple, open-source music app made by **sloes** <3
+
+Iridium lets you search for music and listen to songs by combining the **iTunes Search API** with **YouTube**. It uses iTunes for music metadata and artwork, while YouTube is used to find and play the corresponding tracks.
+
+## Features
+
+* 🎵 Search for songs and artists
+* 🔎 Music metadata powered by the iTunes Search API
+* ▶️ Finds songs through YouTube
+* 🖼️ Album artwork and track information
+* 🆓 Free to use
+* 🌱 Open source
+* ⚡ Built with Next.js
+
+## Tech Stack
+
+* [Next.js](https://nextjs.org/)
+* TypeScript
+* iTunes Search API
+* YouTube
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have Node.js installed.
+
+### Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone <your-repository-url>
+cd iridium
+npm install
+```
+
+### Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
+```
+
+Or with another package manager:
+
+```bash
 yarn dev
 # or
 pnpm dev
@@ -14,27 +55,21 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Iridium uses the iTunes Search API to search for songs and retrieve information such as titles, artists, albums, and artwork.
 
-## Learn More
+When a track is selected, Iridium searches YouTube for the corresponding song and uses the result for playback.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions, suggestions, and improvements are welcome!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Feel free to open an issue or submit a pull request.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# Iridium
-
-A free, simple, and opensource music app made by sloes <3
+Made with <3 by **sloes**
